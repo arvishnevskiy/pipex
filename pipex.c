@@ -6,7 +6,7 @@
 /*   By: kelisabe <kelisabe@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/04 12:04:57 by kelisabe          #+#    #+#             */
-/*   Updated: 2022/03/04 19:21:05 by kelisabe         ###   ########.fr       */
+/*   Updated: 2022/03/19 11:56:26 by kelisabe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,6 @@ char	*find_cmd(t_pipex pipex, char *cmd_name)
 		i++;
 	}
 	exit(1);
-	// сообщение об отсутсвие команды
 }
 
 void	child_process(t_pipex pipex, char **envp, int i)
@@ -60,7 +59,6 @@ int	main(int argc, char **argv, char **envp)
 
 	if (argc != 5)
 		return (1);
-	// 1 = mistake;
 	parsing_pipex(argc, argv, &pipex);
 	if (pipe(pipex.fds) == -1)
 	{
